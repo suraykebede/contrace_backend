@@ -1,0 +1,23 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "final project contact tracing application",
+  "main": "endpoint.js",
+  "dependencies": {
+    "cloudinary": "^1.23.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "firebase-admin": "^9.4.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node endpoint.js"	
+  },
+  "engines": {
+     "node": "12.18.3"	
+  }, 
+  "author": "surafel kebede",
+  "license": "ISC"
+}
