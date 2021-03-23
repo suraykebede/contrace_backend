@@ -31,7 +31,8 @@ async function use_internal_logs(username, venue_array) {
       let type = "warning";
       let sending = await SendNotificationsMass.send_notification_mass(
         Users,
-        msg
+        msg,
+        type
       );
     }
     return "INTERNAL_LOGS_CLEARED";

@@ -24,9 +24,12 @@ const GRANT_HEALTH_ADMIN = require("./Services/Auth/HealthAdmin/grant_health_adm
 const GRANT_TESTINGSITE_ADMIN = require("./Services/Auth/TestingSiteAdmin/grant_testing_site_admin");
 const GRANT_ME = require("./Services/Auth/Me/grant_me");
 
-// ------------- Analytics ------------
-const GET_ALL_TRACES = require('./Services/Analytics/Traces/get_all_traces');
+const REMOVE_HEALTH_ADMIN = require("./Services/Auth/HealthAdmin/remove_health_admin");
+const REMOVE_TEST_ADMIN = require("./Services/Auth/TestingSiteAdmin/remove_testing_site_admin");
 
+// ------------- Analytics ------------
+const GET_ALL_TRACES = require("./Services/Analytics/Traces/get_all_traces");
+const USER_INFECTION_COORDINATES = require("./Services/IndicativeMap/Coordinates/user_infection_coordinates");
 
 // -------------- New Entities --------
 const ADD_USER = require("./Services/NewEntities/User/add_user");
@@ -57,8 +60,11 @@ const GET_PHONENUMBER = require("./Services/DataProviders/get_phonenumber");
 const READ_NOTIFICATIONS = require("./Services/Notification/User/Recieve/read_notifications");
 const GET_VENUE_NOTIFICATIONS = require("./Services/Notification/Venue/Recieve/read_venue_notifications");
 const CURRENT_VENUE = require("./Services/DataProviders/current_venue");
-const GET_VENUE_INFORMATION = require('./Services/DataProviders/VenueServices/get_venue_information')
+const GET_VENUE_INFORMATION = require("./Services/DataProviders/VenueServices/get_venue_information");
 const ADMINS = require("./Services/DataProviders/Admins/admins");
+const VENUES = require("./Services/DataProviders/VenueServices/get_all_venues");
+const UPDATE_VENUE = require("./Services/DataProviders/VenueServices/update_venue");
+const SUMMARIZER = require("./Services/DataProviders/summarizer");
 
 // --------------- Utilities ----------
 
@@ -150,6 +156,24 @@ EndPoint.get("/api/auth/me", async (req, res) => {
   });
 });
 
+EndPoint.delete("/api/remove_testadmin", async (req, res) => {
+  let remover = await REMOVE_TEST_ADMIN.remove_testing_site_admin(
+    req.query.username
+  );
+  res.send({
+    msg: remover,
+  });
+});
+
+EndPoint.delete("/api/remove_healthadmin", async (req, res) => {
+  let remover = await REMOVE_HEALTH_ADMIN.remove_health_admin(
+    req.query.username
+  );
+  res.send({
+    msg: remover,
+  });
+});
+
 // TODO: notifications
 EndPoint.get("/api/notifications/user", async (req, res) => {
   console.clear();
@@ -160,7 +184,9 @@ EndPoint.get("/api/notifications/user", async (req, res) => {
 });
 EndPoint.get("/api/notifications/venue", async (req, res) => {
   let venue = req.query.venue;
-  let VenueNotifications = await GET_VENUE_NOTIFICATIONS.read_venue_notification(venue);
+  let VenueNotifications = await GET_VENUE_NOTIFICATIONS.read_venue_notification(
+    venue
+  );
   res.send(VenueNotifications);
 });
 
@@ -172,11 +198,13 @@ EndPoint.get("/api/imagegetter", async (req, res) => {
   });
 });
 
-EndPoint.get('/api/get_venue_info', async (req, res) => {
+EndPoint.get("/api/get_venue_info", async (req, res) => {
   let username = req.query.username;
-  let venue_getter = await GET_VENUE_INFORMATION.get_venue_information(username);
+  let venue_getter = await GET_VENUE_INFORMATION.get_venue_information(
+    username
+  );
   res.send(venue_getter);
-})
+});
 
 EndPoint.get("/api/getfullname", async (req, res) => {
   let username = req.query.username;
@@ -338,12 +366,11 @@ EndPoint.get("/api/history/visits", async (req, res) => {
   res.send(visits);
 });
 
-EndPoint.get('/api/admins', async (req, res) => {
+EndPoint.get("/api/admins", async (req, res) => {
   let type = req.query.type;
   let admins = await ADMINS.admins(type);
   res.send(admins);
-
-})
+});
 
 // TODO: build analytics
 EndPoint.get("/api/alltraces", async (req, res) => {
@@ -352,14 +379,38 @@ EndPoint.get("/api/alltraces", async (req, res) => {
 });
 
 // TODO: get coordinates for indicative map
-EndPoint.get("/api/coords/", async (req, res) => {});
+EndPoint.get("/api/coords/", async (req, res) => {
+  let coordinates = await USER_INFECTION_COORDINATES.user_infection_coordinates();
+  res.send(coordinates);
+});
 
-// TODO: log out
+EndPoint.get("/api/allvenues", async (req, res) => {
+  let venues = await VENUES.get_all_venues();
+  res.send(venues);
+});
+
+EndPoint.post("/api/update_venue", async (req, res) => {
+  let updater = await UPDATE_VENUE.update_venue(
+    req.body.venue,
+    req.body.venue_latitude,
+    req.body.venue_longitude,
+    req.body.administrator,
+    req.body.old_admin
+  );
+  res.send(updater);
+});
+
+EndPoint.get("/api/summary", async (req, res) => {
+  let summarizer = await SUMMARIZER.summarizer();
+  res.send({
+    msg: summarizer,
+  });
+});
+
 EndPoint.delete("/api/logout", async (req, res) => {
   let device_id = req.query.device_id;
   let remover = await REMOVE_DEVICE.remove_device(device_id);
   res.send({
-    msg: remover
-  })
-})
-
+    msg: remover,
+  });
+});

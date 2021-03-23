@@ -4,12 +4,18 @@ const SendNotification = require("../../Notification/User/Send/send_notification
 async function add_venue(venue) {
   const VenuesCollection = DataAccess.database.collection("Venues");
   const UserCollection = DataAccess.database.collection("Users");
+  const VenueAdministrators = DataAccess.database.collection(
+    "VenueAdministrator"
+  );
   try {
     let user_getter = await UserCollection.doc(venue.administrator).get();
     let user_verifier = user_getter.exists;
-    if(!user_verifier){
-      return 'NO_SUCH_USER';
+    if (!user_verifier) {
+      return "NO_SUCH_USER";
     }
+    const VenueAdminAssign = await VenueAdministrators.doc(
+      venue.administrator
+    ).set({ venue: venue.venue });
     const VenueToAdd = await VenuesCollection.doc(venue.venue).set({
       venue_name: venue.venue_name,
       venue: venue.venue,
@@ -22,8 +28,8 @@ async function add_venue(venue) {
       infection: venue.infection,
       license_plate: venue.license_plate,
     });
-    let msg = 'Admin rights, see venue tab';
-    let type = 'info';
+    let msg = "Admin rights, see venue tab";
+    let type = "info";
     let Notifier = await SendNotification.send_notification(
       venue.administrator,
       msg,

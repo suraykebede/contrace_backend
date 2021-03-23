@@ -1,0 +1,328 @@
+{
+  "msg": {
+    "users": [
+      {
+        "first_name": "Mikiyas",
+        "last_name": "Debebe",
+        "age": "28",
+        "gender": "Male",
+        "phone_number": "+251908435233",
+        "username": "@Michah8"
+      },
+      {
+        "first_name": "Abebech",
+        "last_name": "Alemu",
+        "age": "65",
+        "gender": "Female",
+        "phone_number": "+251963545151",
+        "username": "@abebech"
+      },
+      {
+        "first_name": "Steven",
+        "last_name": "Crowder",
+        "age": "25",
+        "gender": "Male",
+        "phone_number": "+251985643154",
+        "username": "@crowder"
+      },
+      {
+        "first_name": "Simon",
+        "last_name": "Daniel",
+        "age": "24",
+        "gender": "Male",
+        "phone_number": "+251984356100",
+        "username": "@cyborg6"
+      },
+      {
+        "first_name": "Joshua",
+        "last_name": "Kimmich",
+        "age": "25",
+        "gender": "Male",
+        "phone_number": "+251969854361",
+        "username": "@jok_6BM"
+      },
+      {
+        "first_name": "Keanu",
+        "last_name": "Reeves",
+        "age": "45",
+        "gender": "Male",
+        "phone_number": "+251965313135",
+        "username": "@keanu00"
+      },
+      {
+        "first_name": "Lindsay",
+        "last_name": "Graham",
+        "age": "25",
+        "gender": "Male",
+        "phone_number": "+251963521454",
+        "username": "@lindsay"
+      },
+      {
+        "first_name": "Manuel",
+        "last_name": "Neuer",
+        "age": "35",
+        "gender": "Male",
+        "phone_number": "+251985263670",
+        "username": "@maneuer"
+      },
+      {
+        "first_name": "Mao",
+        "last_name": "Ze Dong",
+        "age": "59",
+        "gender": "Male",
+        "phone_number": "+251965313131",
+        "username": "@maozdng"
+      },
+      {
+        "first_name": "Mariamawit",
+        "last_name": "Gebeyehu",
+        "age": "25",
+        "gender": "Female",
+        "phone_number": "+251965553696",
+        "username": "@mariagb"
+      },
+      {
+        "first_name": "Person",
+        "last_name": "One",
+        "age": "25",
+        "gender": "Male",
+        "phone_number": "+251985646464",
+        "username": "@mati333"
+      },
+      {
+        "first_name": "Person ",
+        "last_name": "A",
+        "age": "22",
+        "gender": "Female",
+        "phone_number": "+251999999999",
+        "username": "@person_a"
+      },
+      {
+        "first_name": "Person ",
+        "last_name": "B",
+        "age": "55",
+        "gender": "Male",
+        "phone_number": "+251999555555",
+        "username": "@person_b"
+      },
+      {
+        "first_name": "Person ",
+        "last_name": "C",
+        "age": "23",
+        "gender": "Female",
+        "phone_number": "+251941564346",
+        "username": "@person_c"
+      },
+      {
+        "first_name": "Donald",
+        "last_name": "Trump",
+        "age": "75",
+        "gender": "Male",
+        "phone_number": "+251965656565",
+        "username": "@realDon"
+      },
+      {
+        "first_name": "Donald",
+        "last_name": "Trump",
+        "age": "77",
+        "gender": "Male",
+        "phone_number": "+251985214587",
+        "username": "@realdjt"
+      },
+      {
+        "first_name": "Robert",
+        "last_name": "Lewandowski",
+        "age": "32",
+        "gender": "Male",
+        "phone_number": "+251989848484",
+        "username": "@robert9"
+      },
+      {
+        "first_name": "Steve",
+        "last_name": "Rogers",
+        "age": "40",
+        "gender": "Male",
+        "phone_number": "+251911230906",
+        "username": "@s_rogr5"
+      },
+      {
+        "first_name": "Salim",
+        "last_name": "Abdella",
+        "age": "24",
+        "gender": "Male",
+        "phone_number": "+251986646464",
+        "username": "@salimo1"
+      },
+      {
+        "first_name": "Person",
+        "last_name": "Two",
+        "age": "35",
+        "gender": "Male",
+        "phone_number": "+251985646464",
+        "username": "@sura333"
+      },
+      {
+        "first_name": "Surafel",
+        "last_name": "Kebede",
+        "age": 23,
+        "gender": "Male",
+        "phone_number": "+251985263670",
+        "username": "@surafel"
+      },
+      {
+        "first_name": "Dog",
+        "last_name": "Person",
+        "age": "25",
+        "gender": "Male",
+        "phone_number": "+251986535254",
+        "username": "@surtest"
+      },
+      {
+        "first_name": "Person",
+        "last_name": "Three",
+        "age": "40",
+        "gender": "Male",
+        "phone_number": "+251965313131",
+        "username": "@tedi333"
+      },
+      {
+        "first_name": "Tony",
+        "last_name": "Stark",
+        "age": "40",
+        "gender": "Male",
+        "phone_number": "+251911239857",
+        "username": "@tnystrk"
+      }
+    ],
+    "venues": [
+      {
+        "venue_name": "AA youth sport ac",
+        "service": "Place of worship",
+        "venue_type": "Stationary",
+        "venue": "@_aaysaet1"
+      },
+      {
+        "venue_name": "Abebe Cafe",
+        "service": "Hospitality",
+        "venue_type": "stationary",
+        "venue": "@_abebe098"
+      },
+      {
+        "venue_name": "Bole International",
+        "service": "Government Offices",
+        "venue_type": "Stationary",
+        "venue": "@_boleintl"
+      },
+      {
+        "venue_name": "Minilik II Palace",
+        "service": "Other",
+        "venue_type": "Stationary",
+        "venue": "@_mipalace"
+      },
+      {
+        "venue_name": "Solomon Cafe",
+        "service": "Hospitality",
+        "venue_type": "stationary",
+        "venue": "@_solcafe9"
+      }
+    ],
+    "samples": [
+      {
+        "result": "Positive",
+        "taken_on": 1608475520049,
+        "username": "@Michah8"
+      },
+      {
+        "result": "Negative",
+        "taken_on": 1609497569683,
+        "username": "@abebech"
+      },
+      {
+        "result": "Positive",
+        "taken_on": 1608474923168,
+        "username": "@cyborg6"
+      },
+      {
+        "result": "Negative",
+        "taken_on": 1608872098709,
+        "username": "@maneuer"
+      },
+      {
+        "result": "Negative",
+        "taken_on": 1610649592545,
+        "username": "@mariagb"
+      },
+      {
+        "result": "Positive",
+        "taken_on": 1611301665535,
+        "username": "@realDon"
+      },
+      {
+        "result": "Negative",
+        "taken_on": 1610296393391,
+        "username": "@realdjt"
+      },
+      {
+        "result": "Negative",
+        "taken_on": 1608872140312,
+        "username": "@robert9"
+      },
+      {
+        "result": "Negative",
+        "taken_on": 1608464647237,
+        "username": "@s_rogr5"
+      },
+      {
+        "result": "Positive",
+        "taken_on": 1611253565495,
+        "username": "@salimo1"
+      },
+      {
+        "result": "Negative",
+        "taken_on": 1608872287516,
+        "username": "@surafel"
+      },
+      {
+        "result": "Positive",
+        "taken_on": 1610530538017,
+        "username": "@surtest"
+      },
+      {
+        "result": "Positive",
+        "taken_on": 1611392908222,
+        "username": "@tedi333"
+      },
+      {
+        "result": "Positive",
+        "taken_on": 1608475393902,
+        "username": "@tnystrk"
+      }
+    ],
+    "contace_traces": [
+      {
+        "users": ["@maozdng"],
+        "other_contacts": ["@keanu00"],
+        "venues": ["@_mipalace"],
+        "person": "@realDon"
+      },
+      {
+        "users": ["@jok_6BM"],
+        "other_contacts": ["@mariagb", "@surafel"],
+        "venues": ["@_solcafe9"],
+        "person": "@salimo1"
+      },
+      {
+        "users": ["@mariagb"],
+        "other_contacts": ["@surafel"],
+        "venues": ["@_boleintl"],
+        "person": "@surtest"
+      },
+      {
+        "users": ["@sura333"],
+        "other_contacts": ["@mati333"],
+        "venues": ["@_aaysaet1"],
+        "person": "@tedi333"
+      }
+    ]
+  }
+}
